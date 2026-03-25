@@ -516,7 +516,6 @@ footer {
 
   .trust-grid { grid-template-columns: 1fr; }
 
-  @media (max-width: 768px) {
   #gallery div[style*="gridTemplateColumns"] {
     display: flex !important;
     flex-direction: column !important;
@@ -528,7 +527,6 @@ footer {
     height: 260px !important;
     flex-shrink: 0 !important;
   }
-}
 
   .contact-card { padding: 32px 24px; }
   .contact-grid { grid-template-columns: 1fr; gap: 24px; }
