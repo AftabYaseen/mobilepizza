@@ -516,9 +516,13 @@ footer {
 
   .trust-grid { grid-template-columns: 1fr; }
 
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+  /* FORCE GALLERY TO 1 COLUMN */
+  #gallery div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  #gallery .g-item {
+    height: 260px !important;
   }
   .g-item.tall { grid-row: span 1; }
 
