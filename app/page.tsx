@@ -355,7 +355,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ══════════════════════ GALLERY ══════════════════════ */}
+     {/* ══════════════════════ GALLERY ══════════════════════ */}
 <section id="gallery" className="section section-alt">
   <div className="container">
     <div className="section-center" style={{ marginBottom: 56 }}>
@@ -365,17 +365,27 @@ export default function Page() {
       </h2>
     </div>
 
-    {/* Row 1: 3 images */}
-    <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:14, marginBottom:14 }}>
+    {/* ALL GALLERY IMAGES — single responsive grid, no nested rows */}
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+      gap: 14,
+    }}>
       {[
-        { src:"/van-night1.png",      alt:"Van at night — lit up beautifully", idx:0 },
-        { src:"/pizza-margarita.png", alt:"Fresh Margarita pizza",             idx:4 },
-        { src:"/van-forest2.png",     alt:"Pizza van at outdoor event",        idx:3 },
+        { src:"/van-night1.png",      alt:"Van at night",            idx:0  },
+        { src:"/pizza-margarita.png", alt:"Fresh Margarita pizza",   idx:4  },
+        { src:"/van-forest2.png",     alt:"Pizza van outdoor event", idx:3  },
+        { src:"/van-night2.png",      alt:"Mobile Pizza van lit up", idx:1  },
+        { src:"/wedding-box.png",     alt:"Wedding pizza box",       idx:10 },
+        { src:"/wedding-eating.png",  alt:"Wedding guest pizza",     idx:11 },
+        { src:"/pizza-veggie.png",    alt:"The Veggie pizza",        idx:5  },
+        { src:"/van-forest1.png",     alt:"Van in the forest",       idx:2  },
+        { src:"/pizza-bbq.jpeg",      alt:"BBQ Chicken pizza",       idx:7  },
       ].map((g) => (
         <div
           key={g.src}
-          className="g-item clickable-img"
-          style={{ height:350 }}
+          className="clickable-img"
+          style={{ height: 280, borderRadius: 16, overflow: "hidden" }}
           onClick={() => openLb(ALL_IMAGES, g.idx)}
         >
           <Image
@@ -384,113 +394,12 @@ export default function Page() {
             width={700}
             height={500}
             style={{
-              width:"100%",
-              height:"100%",
-              objectFit:"cover",
-              objectPosition:"center",
-              display:"block",
-              transition:"transform 0.5s",
-              borderRadius:16
-            }}
-          />
-        </div>
-      ))}
-    </div>
-
-    {/* Row 2: wide + tall stack */}
-    <div style={{ display:"grid", gridTemplateColumns:"2fr 1fr", gap:14, marginBottom:14 }}>
-      
-      {/* LEFT BIG IMAGE */}
-      <div
-        className="g-item clickable-img"
-        style={{ height:714 }} // (350 * 2) + 14 gap
-        onClick={() => openLb(ALL_IMAGES, 1)}
-      >
-        <Image
-          src="/van-night2.png"
-          alt="Mobile Pizza van lit up"
-          width={900}
-          height={500}
-          style={{
-            width:"100%",
-            height:"100%",
-            objectFit:"cover",
-            objectPosition:"center",
-            borderRadius:16
-          }}
-        />
-      </div>
-
-      {/* RIGHT STACK */}
-      <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
-        <div
-          className="g-item clickable-img"
-          style={{ height:350 }}
-          onClick={() => openLb(ALL_IMAGES, 10)}
-        >
-          <Image
-            src="/wedding-box.png"
-            alt="Custom wedding pizza box"
-            width={400}
-            height={300}
-            style={{
-              width:"100%",
-              height:"100%",
-              objectFit:"cover",
-              objectPosition:"center",
-              borderRadius:16
-            }}
-          />
-        </div>
-
-        <div
-          className="g-item clickable-img"
-          style={{ height:350 }}
-          onClick={() => openLb(ALL_IMAGES, 11)}
-        >
-          <Image
-            src="/wedding-eating.png"
-            alt="Wedding guest enjoying pizza"
-            width={400}
-            height={300}
-            style={{
-              width:"100%",
-              height:"100%",
-              objectFit:"cover",
-              objectPosition:"center",
-              borderRadius:16
-            }}
-          />
-        </div>
-      </div>
-    </div>
-
-    {/* Row 3: 3 more images */}
-    <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:14 }}>
-      {[
-        { src:"/pizza-veggie.png", alt:"The Veggie pizza", idx:5 },
-        { src:"/van-forest1.png",  alt:"Van in the forest", idx:2 },
-        { src:"/pizza-bbq.jpeg",   alt:"BBQ Chicken pizza", idx:7 },
-      ].map((g) => (
-        <div
-          key={g.src}
-          className="g-item clickable-img"
-          style={{ height:350 }}
-          onClick={() => openLb(ALL_IMAGES, g.idx)}
-        >
-          <Image
-            src={g.src}
-            alt={g.alt}
-            width={700}
-            height={500}
-            style={{
-              width:"100%",
-              height:"100%",
-              objectFit:"cover",
-              objectPosition:"center",
-              display:"block",
-              transition:"transform 0.5s",
-              borderRadius:16
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              display: "block",
+              transition: "transform 0.5s",
             }}
           />
         </div>
