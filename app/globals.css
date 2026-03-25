@@ -516,15 +516,22 @@ footer {
 
   .trust-grid { grid-template-columns: 1fr; }
 
-  /* FORCE GALLERY TO 1 COLUMN */
-  #gallery div[style*="gridTemplateColumns"] {
-    grid-template-columns: 1fr !important;
-  }
+  /* FORCE GALLERY TO 1 COLUMN ON MOBILE */
+#gallery div[style*="gridTemplateColumns"] {
+  grid-template-columns: 1fr !important;
+  grid-template-rows: auto !important;
+}
 
-  #gallery .g-item {
-    height: 260px !important;
-  }
-  .g-item.tall { grid-row: span 1; }
+#gallery div[style*="gridTemplateColumns"] > div {
+  grid-column: 1 / -1 !important;
+  height: 260px !important;
+}
+
+#gallery .g-item {
+  height: 260px !important;
+}
+
+.g-item.tall { grid-row: span 1; }
 
   .contact-card { padding: 32px 24px; }
   .contact-grid { grid-template-columns: 1fr; gap: 24px; }
