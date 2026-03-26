@@ -14,7 +14,7 @@ const SERVICES = [
   {
     title: "Weddings",
     img: "/wedding-eating.png",
-    desc: "Make your special day unforgettable. Fresh wood-fired pizzas served slice by slice — a unique, interactive dining experience your guests will remember forever.",
+    desc: "Make your special day unforgettable. Fresh fired oven pizzas served slice by slice — a unique, interactive dining experience your guests will remember forever.",
   },
   {
     title: "Events & Parties",
@@ -64,7 +64,7 @@ const ALL_IMAGES = [
   { src: "/pizza-veggie.png",   alt: "The Veggie Pizza" },
   { src: "/pizza-pepperoni.jpeg",alt: "Pepperoni Pizza" },
   { src: "/pizza-bbq.jpeg",     alt: "BBQ Chicken Pizza" },
-  { src: "/pizza-oven1.jpeg",   alt: "Wood-fired oven" },
+  { src: "/pizza-oven1.jpeg",   alt: "Fired oven" },
   { src: "/pizza-oven2.jpeg",   alt: "Flame cooking" },
   { src: "/wedding-box.png",    alt: "Custom wedding pizza box" },
   { src: "/wedding-eating.png", alt: "Wedding guest enjoying pizza" },
@@ -189,7 +189,7 @@ export default function Page() {
           <h1 className="hero-h1">Fresh Fire<br /><span>Cooked Pizza</span></h1>
           <p className="hero-sub">Anywhere In South Wales</p>
           <p className="hero-desc">
-            Bringing the authentic taste of wood-fired pizza to your weddings, events,
+            Bringing the authentic taste of fired oven pizza to your weddings, events,
             festivals, and parties. Made fresh, served hot.
           </p>
           <div className="hero-tags">
@@ -216,7 +216,7 @@ export default function Page() {
                 className="about-img clickable-img"
                 onClick={() => openLb(ALL_IMAGES, 0)}
               />
-              <div className="about-badge">🔥 Wood-Fired<br />At 400°C</div>
+              <div className="about-badge">🔥Fired Oven<br />At 400°C</div>
             </div>
             <div>
               <p className="about-eyebrow">🍕 About Mobile Pizza</p>
@@ -224,18 +224,18 @@ export default function Page() {
               <div className="about-line" />
               <p className="about-p">
                 We bring the authentic pizzeria experience to you — serving freshly made
-                wood-fired pizzas across South Wales. Our mobile setup transforms any
+                fired oven pizzas across South Wales. Our mobile setup transforms any
                 location into an Italian-inspired feast, perfect for weddings, festivals,
                 corporate events, and private parties.
               </p>
               <p className="about-p">
                 Each pizza is crafted with care and cooked to perfection in our
-                wood-fired oven, delivering that authentic crispy base and perfectly
+                fired oven, delivering that authentic crispy base and perfectly
                 melted toppings that only flame-cooking can achieve.
               </p>
               <div className="about-features">
                 {[
-                  "Wood-fired oven reaching 400°C",
+                  "Fired oven reaching 400°C",
                   "Fresh dough made daily on site",
                   "Serving within 100-mile radius of Bridgend",
                   "Vegetarian & gluten-free options available",
@@ -278,7 +278,7 @@ export default function Page() {
       <section id="menu" className="section section-alt">
         <div className="container">
           <div className="section-center" style={{ marginBottom: 56 }}>
-            <p className="eyebrow">Our Wood-Fired Pizzas</p>
+            <p className="eyebrow">Our Fired Oven Pizzas</p>
             <h2 className="section-title">Hand-Crafted Fresh<br /><span>At Every Event</span></h2>
           </div>
           <div className="menu-grid">
